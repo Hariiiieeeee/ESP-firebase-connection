@@ -2,12 +2,12 @@
 #include <FirebaseESP8266.h>
 
 // Wi-Fi credentials
-const char* ssid = "chittuKuruvi";
-const char* password = "1234hari";
+const char* ssid = "wifi-ssid";
+const char* password = "wifi-password";
 
 // Firebase configuration
-#define FIREBASE_HOST "aquasense-f9d50-default-rtdb.asia-southeast1.firebasedatabase.app"
-#define FIREBASE_API_KEY "AIzaSyDt2uFdy-gDJ1PUCivKO9kR4EG5YSkhuZM" // Firebase API key
+#define FIREBASE_HOST "firebase-host-URL"
+#define FIREBASE_API_KEY "Firebase API key"
 
 // Firebase and Wi-Fi initialization
 FirebaseData firebaseData;
@@ -32,8 +32,8 @@ void setup() {
     firebaseConfig.host = FIREBASE_HOST;
     firebaseConfig.api_key = FIREBASE_API_KEY;  // Use API key here
 
-    firebaseAuth.user.email = "hariharan2760@gmail.com";
-    firebaseAuth.user.password = "Hari@2004";
+    firebaseAuth.user.email = "email@gmail.com";
+    firebaseAuth.user.password = "password";
 
     // Initialize Firebase
     Firebase.begin(&firebaseConfig, &firebaseAuth);
